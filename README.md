@@ -11,8 +11,14 @@
 
 ### Задание 2
 
+simple-test:
+  stage: test
+  image: busybox:latest
+  script:
+    - echo "Пайплайн работает! Всё в порядке."
 
-![2](screenshots/2.png)`
 
-![3](screenshots/3.png))`
+![Runner](screenshots/2.png)`
+
+![Runner](screenshots/3.png)`
 
