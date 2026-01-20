@@ -1,0 +1,21 @@
+stages:
+  - test
+  - deploy
+
+run-tests:
+  stage: test
+  image: alpine:latest
+  script:
+    - echo "Запуск тестовой стадии..."
+    - echo "Проверяем наличие README.md"
+    - ls -la | grep README.md
+    - echo "Тесты пройдены успешно!"
+
+deploy-demo:
+  stage: deploy
+  image: alpine:latest
+  script:
+    - echo "Это стадия условного развертывания (deploy)."
+    - echo "Здесь могли бы быть команды для копирования файлов на сервер."
+  only:
+    - main
